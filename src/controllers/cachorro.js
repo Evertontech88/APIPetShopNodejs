@@ -22,9 +22,9 @@ class ControllerCachorro {
 
       try {
 
-         const { nome, raca,  } = req.body
+         const { nome, raca  } = req.body
 
-         const cachorro = await ServiceCachorro.CreateC(nome, raca)
+         const cachorro = await ServiceCachorro.Create(nome, raca)
          res.send({ msg: cachorro })
 
       } catch (error) {

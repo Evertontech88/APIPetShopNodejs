@@ -7,7 +7,7 @@ class ControllerCliente {
    async GetCliente(req, res) {
       //todas funções do controller tem try cath, quadrinho, (tenta executar ou capturar um erro)
       try {
-         const cliente = await ServiceCliente.GetClientes()
+         const clientes = await ServiceCliente.GetClientes()
          res.send({ msg: clientes })
 
 

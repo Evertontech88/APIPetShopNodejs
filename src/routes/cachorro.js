@@ -7,7 +7,6 @@ const router = express.Router()
 
 
 router.post('/', ControllerCachorro.CreateCachorro)
-router.post('/',auth, ControllerCachorro.Login)
 router.get('/',auth,ControllerCachorro.GetCachorro)
 router.put('/:id',auth, ControllerCachorro.UpdateCachorro)
 router.delete('/:id',auth, ControllerCachorro.DeleteCachorro)
