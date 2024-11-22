@@ -10,8 +10,8 @@ const app= express()
 app.use(express.json())
 
 // Adicionar as rotas ao express
-app.use(routesCliente)
-app.use(routesCachoro)
+app.use('/cliente',routesCliente)
+app.use('/cachorro',routesCachoro)
 const PORT=3000
 
 //conexão com banco de dados;

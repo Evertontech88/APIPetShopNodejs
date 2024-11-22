@@ -7,7 +7,7 @@ const router = express.Router()
 
 
 router.post('/', ControllerCliente.CreateCliente)
-router.post('/',auth, ControllerCliente.Login)
+router.post('/login', ControllerCliente.Login)
 router.get('/',auth,ControllerCliente.GetCliente)
 router.put('/:id',auth, ControllerCliente.UpdateCliente)
 router.delete('/:id',auth, ControllerCliente.DeleteCliente)

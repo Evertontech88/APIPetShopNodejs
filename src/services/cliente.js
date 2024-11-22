@@ -53,18 +53,18 @@ class ServiceCliente {
         return cliente.destroy({id})
     }
 
-async Login(telefone, endereco){
+async Login(senha, email){
 
-    if(!telefone || !endereco) {
+    if(!senha || !email) {
         throw new Error ("Email ou senha invalido")
     }
-    const cliente = await ModelCliente.findOne({where: {telefone}})
+    const cliente = await ModelCliente.findOne({where: {email}})
 
     if(!cliente) {
         throw new Error ("EMAIL INVALIDO")
     }
 
-    const senhaValida = brcypt.compare(endereco, cliente.endereco)
+    const senhaValida = brcypt.compare(senha, cliente.senha)
     if(!senhaValida) { 
         throw new Error("telefone ou senha invalido")
     }

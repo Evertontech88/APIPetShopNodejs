@@ -21,6 +21,12 @@ class ModelCliente {
             },
             telefone: {
                 type: database.db.Sequelize.STRING
+            },
+            email: {
+                type: database.db.Sequelize.STRING
+            },
+            senha: {
+                type: database.db.Sequelize.STRING
             }
         })
     }

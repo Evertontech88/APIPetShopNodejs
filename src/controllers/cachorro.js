@@ -64,22 +64,8 @@ class ControllerCachorro {
          res.status(500).send({ msg: error.message })
       }
    }
-
-
-async Login(req,res){
-
-   try {
-      const { raca} = req.body
-      const token = await ServiceCachorro.Login(raca)
-      res.status(200).send({token})
-   } 
-   catch (error){
-      res.status(500).send({ msg: error.message})
-   
-   }
-
  
-  }
+  
 }
 
 module.exports = new ControllerCachorro()
