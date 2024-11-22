@@ -57,8 +57,7 @@ async Login(senha, email){
 
     if(!senha || !email) {
         throw new Error ("Email ou senha invalido")
-    }
-    const cliente = await ModelCliente.findOne({where: {email}})
+    }const cliente = await ModelCliente.findOne({where: {email}})
 
     if(!cliente) {
         throw new Error ("EMAIL INVALIDO")
